@@ -1,3 +1,5 @@
+# geo-api
+GEO Location /  Weather 
 <h1>For setup project follow the below given steps.</h1>
 <br/>
 <ol>
