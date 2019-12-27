@@ -105,57 +105,6 @@ class GeoLocationController extends Controller
                     return ['ip' => $ip_address, 'geo' => $ex->getMessage()];
                 }
         }
-
-        // // dd($service);
-        // $client = new Client();
-        // $message = '';
-        // $geo = [];
-        // if($service == 'ip-api'){
-        //     $base_url = Config::get('constants.IP_API_URL');
-        //     $url = $base_url.$ip_address;            
-        //     $request = $client->get($url);
-        //     $response = $request->getBody();
-        //     $response =  unserialize($response);
-        //     if(isset($response['status']) && $response['status']  == 'success'){
-        //         $geo = [
-        //             'service' => $service,
-        //             'city' => $response['city'],
-        //             'region' => $response['region'],
-        //             'country' => $response['country'],
-        //         ];
-        //         return ['ip' => $ip_address, 'geo' => $geo];
-        //     }else{
-        //         return ['ip' => $ip_address, 'geo' => $geo];
-        //     }
-            
-            
-        // }
-        
-
-        // if($service == 'freegeoip'){
-
-        //     $base_url = Config::get('constants.GEO_IP_API_URL');
-        //     $api_key = Config::get('constants.GEO_API_KEY');
-        //     $url = $base_url.$ip_address.'?access_key='.$api_key;
-        //     // dd($url);
-        //     $request = $client->get($url);
-        //     $response = $request->getBody();
-        //     $response =  json_decode($response, true);
-            
-        //     if(isset($response['success']) && $response['success']  == true){
-        //         $geo = [
-        //             'service' => $geo_service,
-        //             'city' => $response['city'],
-        //             'region' => $response['region'],
-        //             'country' => $response['country'],
-        //         ];
-        //         return ['ip' => $ip_address, 'geo' => $geo];
-        //     }else{
-        //         $message = $response['error']['info'];
-        //         return ['ip' => $ip_address, 'geo' => $message];
-        //     }
-            
-        // }
         
     }
 }
